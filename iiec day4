@@ -1,0 +1,35 @@
+import os
+import pyttsx3
+
+pyttsx3.speak(" Hello WELCOME TO IIEC PROGRAM")
+while True :
+ t = input("\n\t\t\tHow can I help you?")
+ if (("run" in t) or ("launch" in t)) and (("chrome" in t)) :
+  pyttsx3.speak("starting chrome")
+  os.system("start chrome")
+ elif (("run" in t) or ("launch" in t)) and (("chrome" in t)) and (("don't" in t))
+  pyttsx3.speak("can't run chrome")
+ elif (("run" in t) or ("launch" in t)) and (("notepad" in t)) :
+  pyttsx3.speak("starting notepad")
+  os.system("start notepad")
+ elif (("run" in t) or ("launch" in t)) and (("notepad" in t)) and (("don't" in t))
+  pyttsx3.speak("can't run notepad")
+ elif (("run" in t) or ("launch" in t)) and (("calculator" in t)) :
+  pyttsx3.speak("starting calculator")
+  os.system("start cal")
+ elif (("run" in t) or ("launch" in t)) and (("calculator" in t)) and (("don't" in t))
+  pyttsx3.speak("can't run calculator")
+ elif (("run" in t) or ("launch" in t)) and (("paint" in t)):
+  pyttsx3.speak("starting paint")
+  os.system("paint")
+ elif (("run" in t) or ("launch" in t)) and (("paint" in t)) and (("don't" in t))
+  pyttsx3.speak("can't run paint")
+ elif (("run" in t) or ("launch" in t)) and (("command prompt" in t)):
+  pyttsx3.speak("starting command prompt")
+  os.system("start cmd")
+ elif (("run" in t) or ("launch" in t)) and (("command prompt" in t)) and (("don't" in t))
+  pyttsx3.speak("can't run command prompt")
+ elif ("exit" in t) or ("quit" in t) :
+  break
+ else :
+  pyttsx3.speak("TRY AGAIN")
