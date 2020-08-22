@@ -80,12 +80,12 @@ while True :
     elif (("run" in t) or ("show" in t) or ("what" in t)) and (("date" in t)) and (("dont" in t)):
         pyttsx3.speak("can't show date")
     elif (("run" in t) or ("show" in t) or ("what" in t)) and (("date" in t)):
-        pyttsx3.speak("showing date")
+        pyttsx3.speak("showing todays date")
         os.system("date")
     elif (("run" in t) or ("show" in t) or ("what" in t)) and (("time" in t)) and (("dont" in t)):
         pyttsx3.speak("can't show time")
     elif (("run" in t) or ("show" in t) or ("what" in t)) and (("time" in t)):
-        pyttsx3.speak("showing time")
+        pyttsx3.speak("showing current time")
         os.system("time")
     elif ("exit" in t) or ("quit" in t) or ("stop" in t) or ("end" in t) or ("thank you" in t):
         pyttsx3.speak("have a good day")
