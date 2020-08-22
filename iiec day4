@@ -6,6 +6,7 @@ engine = pyttsx3.init()
 sound = engine.getProperty('voices')
 engine.setProperty('voice',sound[1].id)
 pyttsx3.speak(" Hello WELCOME TO IIEC PROGRAM")
+pyttsx3.speak("i am suzie")
 pyttsx3.speak("How can I help you")
 while True :
     t = input("\n\t\t\tHow can I help you?")
