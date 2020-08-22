@@ -1,0 +1,93 @@
+import os
+import pyttsx3
+import wikipedia
+engine = pyttsx3.init()    
+
+sound = engine.getProperty('voices')
+engine.setProperty('voice',sound[1].id)
+pyttsx3.speak(" Hello WELCOME TO IIEC PROGRAM")
+pyttsx3.speak("How can I help you")
+while True :
+    t = input("\n\t\t\tHow can I help you?")
+    if (("run" in t) or ("launch" in t) or ("start" in t)) and (("chrome" in t)) and (("dont" in t)):
+        pyttsx3.speak("can't run chrome")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("chrome" in t)):
+        pyttsx3.speak("starting chrome")
+        os.system("start chrome")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("notepad" in t)) and (("dont" in t)) :
+        pyttsx3.speak("can't run notepad")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("notepad" in t)):
+        pyttsx3.speak("starting notepad")
+        os.system("start notepad")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("calculator" in t)) and (("dont" in t)):
+        pyttsx3.speak("can't run calculator")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("calculator" in t)):
+        pyttsx3.speak("starting calculator")
+        os.system("start cal")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("paint" in t)) and (("dont" in t)):
+        pyttsx3.speak("can't run paint")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("paint" in t)):
+        pyttsx3.speak("starting paint")
+        os.system("paint")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("command prompt" in t)) and (("dont" in t)):
+        pyttsx3.speak("can't run command prompt")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("command prompt" in t)):
+        pyttsx3.speak("starting command prompt")
+        os.system("start cmd")
+    elif (("what" in t) or ("get" in t)) and (("ip" in t)) and (("dont" in t)): 
+        pyttsx3.speak("cant show ip")
+    elif (("what" in t) or ("get" in t)) and (("ip" in t)):
+        pyttsx3.speak("showing ip") 
+        os.system("ipconfig")
+    elif (("power off" in t) or ("shutdown" in t)) and (("dont" in t)):
+        pyttsx3.speak("cant shutdown")
+    elif (("power off" in t) or ("shutdown" in t)):
+        pyttsx3.speak("shutting down")
+        os.system("shutdown /s")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("google" in t)) and (("dont" in t)):
+        pyttsx3.speak("can't run google")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("google" in t)):
+        pyttsx3.speak("starting google")
+        os.system("start http://google.com")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("youtube" in t)) and (("dont" in t)):
+        pyttsx3.speak("can't run youtube")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("youtube" in t)):
+        pyttsx3.speak("starting youtube")
+        os.system("start http://youtube.com")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("linuxworldindia" in t)) and (("dont" in t)):
+        pyttsx3.speak("can't run linux world india")
+    elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("linuxworldindia" in t)):
+        pyttsx3.speak("starting linux world india")
+        os.system("start www.linuxworldindia.org")
+    elif (("run" in t) or ("launch" in t) or ("start" in t) or ("get some info" in t)) and (("wikipedia" in t)) and (("dont" in t)):
+        pyttsx3.speak("cant run wikipedia")
+    elif (("run" in t) or ("launch" in t) or ("start" in t) or ("get some info" in t)) and (("wikipedia" in t)):
+        pyttsx3.speak("what you want to search on wikipedia")
+        r = input("\n\t\t\twhat you want to search on wikipedia?")
+        result = wikipedia.summary(r, sentences = 2)  
+        print(result)
+    elif ((("show" in t) or ("launch" in t) or ("start" in t) or ("get some" in t)) and (("news" in t) or ("current affair" in t))) and (("dont" in t)):
+        pyttsx3.speak("cant show news")
+    elif ((("show" in t) or ("launch" in t) or ("start" in t) or ("get some" in t)) and (("news" in t) or ("current affair" in t))):
+        pyttsx3.speak("showing news")
+        os.system("start https://news.google.com/topstories")
+    elif (("run" in t) or ("show" in t) or ("what" in t)) and (("weather" in t)) and (("dont" in t)):
+        pyttsx3.speak("can't show weather")
+    elif (("run" in t) or ("show" in t) or ("what" in t)) and (("weather" in t)):
+        pyttsx3.speak("showing weather")
+        os.system("start https://www.google.com/search?q=weather")
+    elif (("run" in t) or ("show" in t) or ("what" in t)) and (("date" in t)) and (("dont" in t)):
+        pyttsx3.speak("can't show date")
+    elif (("run" in t) or ("show" in t) or ("what" in t)) and (("date" in t)):
+        pyttsx3.speak("showing date")
+        os.system("date")
+    elif (("run" in t) or ("show" in t) or ("what" in t)) and (("time" in t)) and (("dont" in t)):
+        pyttsx3.speak("can't show time")
+    elif (("run" in t) or ("show" in t) or ("what" in t)) and (("time" in t)):
+        pyttsx3.speak("showing time")
+        os.system("time")
+    elif ("exit" in t) or ("quit" in t) or ("stop" in t) or ("end" in t) or ("thank you" in t):
+        pyttsx3.speak("have a good day")
+        break
+    else :
+        pyttsx3.speak("TRY AGAIN")
