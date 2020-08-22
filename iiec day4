@@ -34,10 +34,16 @@ while True :
     elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("command prompt" in t)):
         pyttsx3.speak("starting command prompt")
         os.system("start cmd")
-    elif (("what" in t) or ("get" in t)) and (("ip" in t)): 
+    elif (("what" in t) or ("get" in t)) and (("ip" in t)) and (("dont" in t)): 
+        pyttsx3.speak("cant show ip")    
+    elif (("what" in t) or ("get" in t)) and (("ip" in t)):
+        pyttsx3.speak("showing ip")
         os.system("ipconfig")
+    elif (("power off" in t) or ("shutdown" in t)) and (("dont" in t)):
+        pyttsx3.speak("cant shutdown")    
     elif (("power off" in t) or ("shutdown" in t)):
-        os.system("shutdown")
+        pyttsx3.speak("shutting down")
+        os.system("shutdown /s")
     elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("google" in t)) and (("dont" in t)):
         pyttsx3.speak("can't run google")
     elif (("run" in t) or ("launch" in t) or ("start" in t)) and (("google" in t)):
