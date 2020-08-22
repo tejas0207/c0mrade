@@ -89,6 +89,7 @@ while True :
         os.system("time")
     elif ("exit" in t) or ("quit" in t) or ("stop" in t) or ("end" in t) or ("thank you" in t):
         pyttsx3.speak("have a good day")
+        pyttsx3.speak("ganpati bappa mourya")
         break
     else :
         pyttsx3.speak("TRY AGAIN")
